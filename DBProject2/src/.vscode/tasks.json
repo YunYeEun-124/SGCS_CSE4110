@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "build-c-mysql-gcc",
+      "command": "gcc",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "-I",
+        "C:/mysql-connector-c-6.1.11-winx64/include",
+        "-L",
+        "C:/mysql-connector-c-6.1.11-winx64/lib",
+        "${file}",
+        "-lmysql",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
